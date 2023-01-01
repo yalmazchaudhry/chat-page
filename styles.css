@@ -1,0 +1,531 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f8f9fd
+}
+
+
+
+
+
+.container{
+    display: flex;
+    gap: 25px;
+    height: 800px;
+    width: auto;
+    /*padding: 25px;*/
+   margin: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 0 6px rgba(0,0,0,0.2);
+}
+
+/* .container > *{
+    border: 1px slateblue solid;
+}*/
+
+
+.sidebar,.user-info{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 1px 15px 20px;
+}
+.user-info{
+  padding-right: 15px;
+  padding-left: 1px;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: #f2f6fc;
+    border-radius: 10px;
+    margin: 15px;
+}
+.chat-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+.status-badge {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 2px solid white;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.chat-line-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    justify-content: flex-end;
+}
+.chat-line{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+.chat-text {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 30px;
+    background-color: #18233b;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 15px;
+    font-size: 10px;
+
+}
+.msg-time{
+    color: #b1b6c3;
+    text-align: left;
+}
+.msg-time-right{
+  color: #b1b6c3;
+  text-align: right;
+}
+.send-msg{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px 15px 25px;
+
+}
+  .send-msg svg{
+    width: 18px;
+    height: 18px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 180px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+   
+}
+
+.logo svg{
+    fill: #d5e2ff;
+    width: 40px;
+    height: 40px;
+}
+
+.image{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+
+}
+
+.image-list{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.profile svg{
+    width: 12px;
+    height: 12px;
+}
+.archive svg{
+    width: 14px;
+    height: 14px;
+}
+.share svg{
+    width: 10px;
+    height: 10px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    background-color: #f5f9fc;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: -8px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .conversation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .circle{
+      height: 20px;
+     width: 20px;
+      border-radius: 50%;
+     background-color: rgba(235, 237, 238, 255);
+     text-align: center ;
+     padding: 2px;
+  }
+  .circleRed{
+    height: 20px;
+   width: 20px;
+    border-radius: 50%;
+   background-color: #f36767;
+   text-align: center ;
+   padding: 2px;
+}
+  
+  .users{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+    width: 100%;
+  }
+  .active1{
+    background-color: #f2f6fc;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .active1, .users:hover {
+    background-color: #f2f6fc;
+    font-weight: bold;
+  }
+  .archive{
+    display: flex;
+    align-items: center;
+    background-color: #f5f9fc;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    gap: 10px;
+
+  }
+  .hb{
+    display: flex;
+    background-color: #afcafe;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .archive p{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+  }
+  .archive-btn {
+    
+        background-color: white;
+        border-radius: 10px;
+        color: #316ee8;
+        padding: 9px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-color: #4c76cc;
+      
+  }
+  .archive-icon svg{
+    fill: #024dfd;
+    width: 12px;
+    height: 12px;
+    
+  }
+  .meeting-menu{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f9fbfc;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    gap: 15px;
+
+  }
+  .time-box{
+    display: flex;
+    background-color: #d8e4fb;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+  .attendence-box{
+    display: flex;
+    background-color: #e4f6f4;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+  .meeters-box{
+    display: flex;
+    background-color: #f7f3ff;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+  .reject-box{
+    display: flex;
+    background-color: #fff1e8;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+
+  .time-icon{
+    width: 15px;
+    height: 15px;
+    fill: #024dfd;
+    background-color: #b4c8ff;
+    border-radius: 50%;
+    
+  }
+  #timeHr{
+    font-size: 14px;
+    color: #0f51f0;
+  }
+  #attendees{
+    font-size: 14px;
+    color: #05bd9d;
+  }
+  #rejectCount{
+    font-size: 14px;
+    color: #fc572a;
+  }
+  #meeters{
+    font-size: 14px;
+    color: #6f5db9;
+  }
+  #title{
+    font-size: 9px;
+  }
+  #attendanceIcon{
+    width: 17px;
+    height: 17px;
+    fill: #10b99e;
+    
+    border-radius: 50%;
+  }
+  #reject-icon{
+    width: 17px;
+    height: 17px;
+    fill: #fc572a;
+    
+    border-radius: 50%;
+  }
+  #meeters-icon{
+    width: 16px;
+    height: 16px;
+    fill: #6d5eb9;
+    
+    border-radius: 50%;
+  }
+  .time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .graph-heading{
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   padding-bottom: 10px;
+  }
+  .top-left{
+    font-weight: bold;
+  }
+  .graph-bars{
+    display: flex;
+    padding-bottom: 3px;
+    gap: 22px;
+  }
+  .bar{
+    width: 10px;
+    height: 70px;
+    background-color: #c8d6fc;
+    border-radius: 10px;
+  }
+  .bar-circle-main{
+    display: flex;
+    gap: 22px;
+  }
+.bar-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c8d6fc;
+    
+}
+.active, .bar:hover {
+  background-color: #034dfc;
+  color: white;
+}
+.active, .bar-circle:hover {
+  background-color: #034dfc;
+  color: white;
+}
+.graph-days{
+    display: flex;
+    font-size: 9px;
+    gap: 16px;
+    padding-top: 4px;
+}
+.share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9fbfc;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    gap: 15px;
+    text-align: center;
+
+  }
+  .share-btn {
+    
+    background-color: #024dfd;
+    border-radius: 10px;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #024dfd;
+  
+}
+.share-icon svg{
+fill: white;
+
+}
